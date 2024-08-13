@@ -25,3 +25,6 @@ connectToMongoDB(mongoURL)
 .then(()=>app.listen(PORT,()=>console.log(`server started at PORT : ${PORT}`)))
 .catch(()=>console.log("can't run app.Unable to coonect the database"))
 
+app.get("/",(req,res)=>{
+    res.json("API is Working")
+})
