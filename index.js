@@ -22,8 +22,10 @@ app.use("/api/v1/comments",commentRoutes)
 
 
 connectToMongoDB(mongoURL)
-.then(()=>app.listen(PORT,()=>console.log(`server started at PORT : ${PORT}`)))
+.then(()=>console.log(`connection successful!`))
 .catch(()=>console.log("can't run app.Unable to coonect the database"))
+
+app.listen(PORT,()=>console.log("Server running on port " + PORT))
 
 app.get("/",(req,res)=>{
     res.json("API is Working")
